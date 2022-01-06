@@ -1,0 +1,46 @@
+{
+	"ts-node": {
+		// It is faster to skip typechecking.
+		// Remove if you want ts-node to do typechecking.
+		// "transpileOnly": true,
+
+		"files": true,
+
+		"compilerOptions": {
+			// compilerOptions specified here will override those declared below,
+			// but *only* in ts-node.  Useful if you want ts-node and tsc to use
+			// different options with a single tsconfig.json.
+		}
+	},
+	"compilerOptions": {
+		"allowJs": false,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"noEmit": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "esnext",
+
+		/* type-checking */
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+
+		/* clean-code */
+		"forceConsistentCasingInFileNames": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true
+	},
+
+	"compileOnSave": true,
+	"exclude": ["node_modules", "build"],
+	"include": ["./**/*.ts", "./**/*.tsx"]
+}
