@@ -48,6 +48,7 @@ Tools are located in `src/lib/*`. You _shouldn't_ need to change anything here -
 | readNDJSON()       | Reads documents from a file                                       |
 | addToDataset()     | Wraps around appendNDJSON() to save documents to the output file  |
 | useSanityDataset() | Wraps around readNDJSON() to ingest documents from the input file |
+| generateID()       | Generates Sanity document ID's with support for drafts.           |
 
 **Helper Functions**
 

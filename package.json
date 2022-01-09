@@ -18,6 +18,7 @@
 	"devDependencies": {
 		"@types/ndjson": "^2.0.1",
 		"@types/node": "^17.0.8",
+		"@types/uuid": "^8.3.4",
 		"concurrently": "^7.0.0",
 		"nodemon": "^2.0.15",
 		"prettier": "^2.5.1",
@@ -26,6 +27,7 @@
 	},
 	"dependencies": {
 		"just-group-by": "^2.0.1",
-		"ndjson": "^2.0.0"
+		"ndjson": "^2.0.0",
+		"uuid": "^8.3.2"
 	}
 }
