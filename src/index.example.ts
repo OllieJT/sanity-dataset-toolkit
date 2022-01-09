@@ -24,7 +24,7 @@ async function handleImport() {
 
 // Export your transformed data back to NDJSON
 async function handleExport() {
-	const documents = await my_transformed_data;
+	const documents = my_transformed_data;
 	await addToDataset({
 		documents,
 		exportFile,
