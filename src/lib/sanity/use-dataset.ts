@@ -6,12 +6,12 @@ interface Props {
 	importFile: string;
 }
 
-type Grouped<Doc extends SanityDocument, Groups extends string> = Record<Groups, Doc[]>;
+type Grouped<Doc extends SanityDocument> = Record<string, Doc[]>;
 
-export async function useSanityDataset<
-	ExpectedDocuments extends SanityDocument,
-	ExpectedGroups extends string,
->({ importFile, groupByType = false }: Props) {
+export async function useSanityDataset<ExpectedDocuments extends SanityDocument>({
+	importFile,
+	groupByType = false,
+}: Props) {
 	let store: ExpectedDocuments[] = [];
 
 	await readNDJSON<ExpectedDocuments>({
@@ -24,10 +24,10 @@ export async function useSanityDataset<
 	console.log(`${store.length} documents found`);
 
 	if (groupByType) {
-		const grouped = groupBy(store, (doc) => doc._type) as Grouped<
-			ExpectedDocuments,
-			ExpectedGroups
-		>;
+		const grouped = groupBy(
+			store,
+			(doc) => doc._type,
+		) as Grouped<ExpectedDocuments>;
 		console.log(`🙋‍♀️ Grouped by: ${Object.keys(grouped)}`);
 		return grouped;
 	} else {
