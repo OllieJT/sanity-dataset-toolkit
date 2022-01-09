@@ -3,8 +3,10 @@
 # User generated content
 dataset/
 /new-dataset/
-/src/source/
-/src/util/
+/src/*
+!/src/lib
+!/src/index.example.ts
+src/index.ts
 
 # Developer Tools
 node_modules/
