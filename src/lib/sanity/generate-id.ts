@@ -6,7 +6,7 @@ interface Props {
 }
 
 export function generateID({ batchName, isDraft }: Props) {
-	const parts = ["import", batchName, uuid].join("-");
+	const parts = ["import", batchName, uuid()].join("-");
 
 	if (isDraft) {
 		return `drafts.${parts}`;
