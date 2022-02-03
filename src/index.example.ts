@@ -32,5 +32,5 @@ async function handleExport() {
 	console.log(`${documents.length} documents added to ${exportFile}`);
 }
 
-handleImport();
-handleExport();
+// handleImport();
+// handleExport();

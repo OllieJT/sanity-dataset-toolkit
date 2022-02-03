@@ -12,7 +12,6 @@ export async function addToDataset<Document extends Object>({
 }: Props<Document>) {
 	const handleEntry = async (data: Document) => {
 		console.count("appendNDJSON...");
-		console.log({ data });
 		await appendNDJSON({
 			data,
 			location: exportFile,
